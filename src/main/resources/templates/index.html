@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Students Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="top-bar">
+    <h1>Students Dashboard</h1>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="logout-btn">Logout</button>
+    </form>
+</header>
+
+<!-- MAIN LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>OPERATIONS</h2>
+        <ul>
+            <li><a th:href="@{/add}">Add Student</a></li>
+            <li><a th:href="@{/students/export/excel}">Export Excel</a></li>
+            <li><a th:href="@{/students/export/pdf}">Export PDF</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+        <h2>Students List</h2>
+
+        <form th:action="@{/delete-multiple}" method="post">
+            <table>
+                <thead>
+                <tr>
+                    <th><input type="checkbox" onclick="toggle(this)">SELECT ALL</th>
+                
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="student : ${students}">
+                    <td><input type="checkbox" name="selectedIds" th:value="${student.id}"></td>
+                    <td th:text="${student.id}"></td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.email}"></td>
+                    <td>
+                        <a th:href="@{/edit/{id}(id=${student.id})}" class="btn-edit">Edit</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <button type="submit" class="delete-btn">Delete Selected</button>
+        </form>
+    </main>
+
+</div>
+
+<script>
+function toggle(source) {
+    const checkboxes = document.getElementsByName('selectedIds');
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = source.checked;
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+

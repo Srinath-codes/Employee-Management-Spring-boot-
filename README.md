@@ -1,34 +1,67 @@
-# Employee Management System
+# Student Management System
 
-A Spring Boot project for building an employee management application. This repository is currently a starting point; update this README as the application features and setup details are implemented.
+A Spring Boot web application for managing student records. It uses Thymeleaf for server-rendered pages and MySQL for persistence.
 
-## Project overview
+## Features
 
-The goal of this project is to provide a backend for managing employee information. The exact features, database, and API routes should be documented here as they are added.
+- Create, view, edit, and delete student records, including bulk deletion.
+- Register and log in with Spring Security; registration passwords are encoded.
+- CAPTCHA support on the authentication flow.
+- Request a password reset by email.
+- Export student records to Excel and PDF.
+- Store users, students, and password-reset tokens with Spring Data JPA.
 
-## Getting started
+## Requirements
 
-1. Clone this repository.
-2. Open it in your Java IDE or import it as a Maven or Gradle project.
-3. Configure the database and application settings in the project configuration.
-4. Run the Spring Boot application using your IDE or the project's build tool.
+- Java 17 or later
+- MySQL
 
-> Build commands and configuration values will be added once the application source is uploaded.
+Maven Wrapper scripts are included, so a separate Maven installation is not required.
+
+## Configuration
+
+Create a MySQL database (default name: `demo`) and configure the application with environment variables:
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `DB_URL` | `jdbc:mysql://localhost:3306/demo` | JDBC connection URL |
+| `DB_USERNAME` | `root` | Database username |
+| `DB_PASSWORD` | empty | Database password |
+| `SERVER_PORT` | `8080` | HTTP port |
+| `MAIL_HOST` | `smtp.gmail.com` | SMTP server |
+| `MAIL_PORT` | `587` | SMTP port |
+| `MAIL_USERNAME` | empty | SMTP account username |
+| `MAIL_PASSWORD` | empty | SMTP account password or app password |
+
+Set the mail variables to enable password-reset emails. Keep credentials out of source control.
+
+## Run locally
+
+From the repository root, run:
+
+```bash
+./mvnw spring-boot:run
+```
+
+On Windows, use:
+
+```powershell
+.\mvnw.cmd spring-boot:run
+```
+
+Then open [http://localhost:8080](http://localhost:8080). The application uses Hibernate schema updates (`ddl-auto=update`) for local development.
 
 ## Future advancements
 
-- Add employee create, read, update, and delete operations.
-- Add input validation and consistent API error responses.
-- Add search, filtering, sorting, and pagination for employee records.
-- Add authentication and role-based authorization for administrators and employees.
-- Connect a persistent database and add schema migrations.
-- Add a web frontend for employee and department management.
-- Add department and job-title management, including employee assignment.
-- Add automated unit and integration tests.
-- Add API documentation with OpenAPI/Swagger.
-- Add Docker support and a CI workflow for builds and tests.
-- Add audit history and secure handling of personal employee data.
+- Add automated unit and integration tests for controllers, services, security, and exports.
+- Add role-based authorization and restrict student operations to permitted users.
+- Add server-side validation, friendly error pages, and consistent error handling.
+- Add pagination, searching, and filtering for large student lists.
+- Review security settings, including CSRF protection and password-reset token expiry validation.
+- Replace automatic schema updates with versioned database migrations.
+- Add API documentation and a documented production deployment setup.
+- Add CI checks and container support.
 
 ## Contributing
 
-Contributions and suggestions are welcome. Please open an issue to discuss a larger change before submitting a pull request.
+Open an issue to discuss a larger change, then submit a pull request with a clear description of the change.

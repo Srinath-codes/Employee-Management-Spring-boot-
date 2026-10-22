@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="form-page">
+    <div class="form-container">
+        <h2>Login</h2>
+
+        <!-- Login Error -->
+        <div th:if="${param.error}" class="error-msg">
+            Invalid username, password, or captcha
+        </div>
+
+        <div th:if="${param.logout}" class="success-msg">
+            Logged out successfully
+        </div>
+
+        <form action="/login" method="post">
+
+       <label for="username">Username</label>
+<input type="text" id="username" name="username" required>
+
+<label for="password">Password</label>
+<input type="password" id="password" name="password" required>
+
+<!-- CAPTCHA -->
+<label for="captcha">Captcha</label>
+        <div style="display:flex; align-items:center; gap:10px;">
+             <img id="captchaImg"
+                     src="/captcha"
+                     alt="Captcha"
+                     style="border:1px solid #ccc; height:40px;">
+
+                <button type="button"
+                        onclick="refreshCaptcha()"
+                        style="padding:6px 10px; cursor:pointer;">
+                    ↻
+                </button>
+            </div>
+
+            <input type="text"
+                   name="captcha"
+                   placeholder="Enter captcha"
+                   required>
+
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+
+        <div class="link-text">
+            <a href="/forgot-password">Forgot Password?</a>
+        </div>
+
+        <div class="link-text">
+            <a href="/register">Create Account</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function refreshCaptcha() {
+        document.getElementById("captchaImg").src =
+            "/captcha?ts=" + new Date().getTime();
+    }
+</script>
+
+</body>
+</html>
+

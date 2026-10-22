@@ -1,0 +1,411 @@
+/* ===============================
+   GLOBAL RESET & BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+}
+
+/* ===============================
+   TOP BAR (INDEX PAGE)
+================================ */
+.top-bar {
+    height: 60px;
+    background-color: #1f2d3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.top-bar h1 {
+    font-size: 22px;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* ===============================
+   MAIN LAYOUT (INDEX PAGE)
+================================ */
+.layout {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+/* ===============================
+   CONTENT AREA
+================================ */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* ===============================
+   TABLE STYLES
+================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th {
+    background-color: #34495e;
+    color: white;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-edit {
+    background-color: #2980b9;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-edit:hover {
+    background-color: #1f618d;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* ===============================
+   FORM PAGES (LOGIN / ADD / EDIT)
+================================ */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===============================
+   FORM CONTAINER
+================================ */
+.form-container {
+    background-color: #2c3e50;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 380px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ===============================
+   FORM ELEMENTS
+================================ */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================ */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #2980b9;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #1f618d;
+}
+
+/* ===============================
+   FORM LINKS (LOGIN/REGISTER)
+================================ */
+.link-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link-text a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-text a:hover {
+    text-decoration: underline;
+}
+.error-msg {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+/* ===============================
+   FORM PAGE (FORGOT / LOGIN / REGISTER)
+================================ */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===============================
+   FORM CONTAINER
+================================ */
+.form-container {
+    background-color: #2c3e50;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 380px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ===============================
+   FORM ELEMENTS
+================================ */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================ */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #2980b9;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #1f618d;
+}
+
+/* ===============================
+   LINK TEXT
+================================ */
+.link-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link-text a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-text a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   ERROR MESSAGE (LOGIN ERROR)
+================================ */
+.error-msg {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ===============================
+   SUCCESS MESSAGE (FORGOT PASSWORD)
+================================ */
+.success-msg {
+    background-color: #27ae60;
+    color: white;
+    padding: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+
+/* ---------- Form Container (shared) ---------- */
+.form-container {
+    width: 360px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ---------- Submit Button ---------- */
+.btn-submit {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #1a252f;
+}
+
+/* ---------- Links ---------- */
+.link-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.link-text a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.link-text a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Error Message ---------- */
+.error-text {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
