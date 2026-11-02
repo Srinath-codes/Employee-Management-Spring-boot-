@@ -1,67 +1,58 @@
-# Student Management System
+IyBTdHVkZW50IE1hbmFnZW1lbnQgU3lzdGVtCgpBIFNwcmluZyBCb290IHdl
+YiBhcHBsaWNhdGlvbiBmb3IgbWFuYWdpbmcgc3R1ZGVudCByZWNvcmRzLiBJ
+dCB1c2VzIFRoeW1lbGVhZiBmb3Igc2VydmVyLXJlbmRlcmVkIHBhZ2VzIGFu
+ZCBNeVNRTCBmb3IgcGVyc2lzdGVuY2UuCgojIyBGZWF0dXJlcwoKLSBDcmVh
+dGUsIHZpZXcsIGVkaXQsIGFuZCBkZWxldGUgc3R1ZGVudCByZWNvcmRzLCBp
+bmNsdWRpbmcgYnVsayBkZWxldGlvbi4KLSBSZWdpc3RlciBhbmQgbG9nIGlu
+IHdpdGggU3ByaW5nIFNlY3VyaXR5OyByZWdpc3RyYXRpb24gcGFzc3dvcmRz
+IGFyZSBlbmNvZGVkLgotIENBUFRDSEEgc3VwcG9ydCBvbiB0aGUgYXV0aGVu
+dGljYXRpb24gZmxvdy4KLSBSZXF1ZXN0IGEgcGFzc3dvcmQgcmVzZXQgYnkg
+ZW1haWwuCi0gRXhwb3J0IHN0dWRlbnQgcmVjb3JkcyB0byBFeGNlbCBhbmQg
+UERGLgotIFN0b3JlIHVzZXJzLCBzdHVkZW50cywgYW5kIHBhc3N3b3JkLXJl
+c2V0IHRva2VucyB3aXRoIFNwcmluZyBEYXRhIEpQQS4KCiMjIFJlcXVpcmVt
+ZW50cwoKLSBKYXZhIDE3IG9yIGxhdGVyCi0gTXlTUUwKCk1hdmVuIFdyYXBw
+ZXIgc2NyaXB0cyBhcmUgaW5jbHVkZWQsIHNvIGEgc2VwYXJhdGUgTWF2ZW4g
+aW5zdGFsbGF0aW9uIGlzIG5vdCByZXF1aXJlZC4KCiMjIENvbmZpZ3VyYXRp
+b24KCkNyZWF0ZSBhIE15U1FMIGRhdGFiYXNlIChkZWZhdWx0IG5hbWU6IGBk
+ZW1vYCkgYW5kIGNvbmZpZ3VyZSB0aGUgYXBwbGljYXRpb24gd2l0aCBlbnZp
+cm9ubWVudCB2YXJpYWJsZXM6Cgp8IFZhcmlhYmxlIHwgRGVmYXVsdCB8IFB1
+cnBvc2UgfAp8IC0tLSB8IC0tLSB8IC0tLSB8CnwgYERCX1VSTGAgfCBgamRi
+YzpteXNxbDovL2xvY2FsaG9zdDozMzA2L2RlbW9gIHwgSkRCQyBjb25uZWN0
+aW9uIFVSTCB8CnwgYERCX1VTRVJOQU1FYCB8IGByb290YCB8IERhdGFiYXNl
+IHVzZXJuYW1lIHwKfCBgREJfUEFTU1dPUkRgIHwgZW1wdHkgfCBEYXRhYmFz
+ZSBwYXNzd29yZCB8CnwgYFNFUlZFUl9QT1JUYCB8IGA4MDgwYCB8IEhUVFAg
+cG9ydCB8CnwgYE1BSUxfSE9TVGAgfCBgc210cC5nbWFpbC5jb21gIHwgU01U
+UCBzZXJ2ZXIgfAp8IGBNQUlMX1BPUlRgIHwgYDU4N2AgfCBTTVRQIHBvcnQg
+fAp8IGBNQUlMX1VTRVJOQU1FYCB8IGVtcHR5IHwgU01UUCBhY2NvdW50IHVz
+ZXJuYW1lIHwKfCBgTUFJTF9QQVNTV09SRGAgfCBlbXB0eSB8IFNNVFAgYWNj
+b3VudCBwYXNzd29yZCBvciBhcHAgcGFzc3dvcmQgfAoKU2V0IHRoZSBtYWls
+IHZhcmlhYmxlcyB0byBlbmFibGUgcGFzc3dvcmQtcmVzZXQgZW1haWxzLiBL
+ZWVwIGNyZWRlbnRpYWxzIG91dCBvZiBzb3VyY2UgY29udHJvbC4KCiMjIFJ1
+biBsb2NhbGx5CgpGcm9tIHRoZSByZXBvc2l0b3J5IHJvb3QsIHJ1bjoKCmBg
+YGJhc2gKLi9tdm53IHNwcmluZy1ib290OnJ1bgpgYGAKCk9uIFdpbmRvd3Ms
+IHVzZToKCmBgYHBvd2Vyc2hlbGwKLlxtdm53LmNtZCBzcHJpbmctYm9vdDpy
+dW4KYGBgCgpUaGVuIG9wZW4gW2h0dHA6Ly9sb2NhbGhvc3Q6ODA4MF0oaHR0
+cDovL2xvY2FsaG9zdDo4MDgwKS4gVGhlIGFwcGxpY2F0aW9uIHVzZXMgSGli
+ZXJuYXRlIHNjaGVtYSB1cGRhdGVzIChgZGRsLWF1dG89dXBkYXRlYCkgZm9y
+IGxvY2FsIGRldmVsb3BtZW50LgoKIyMgRnV0dXJlIGFkdmFuY2VtZW50cwoK
+LSBBZGQgYXV0b21hdGVkIHVuaXQgYW5kIGludGVncmF0aW9uIHRlc3RzIGZv
+ciBjb250cm9sbGVycywgc2VydmljZXMsIHNlY3VyaXR5LCBhbmQgZXhwb3J0
+cy4KLSBBZGQgcm9sZS1iYXNlZCBhdXRob3JpemF0aW9uIGFuZCByZXN0cmlj
+dCBzdHVkZW50IG9wZXJhdGlvbnMgdG8gcGVybWl0dGVkIHVzZXJzLgotIEFk
+ZCBzZXJ2ZXItc2lkZSB2YWxpZGF0aW9uLCBmcmllbmRseSBlcnJvciBwYWdl
+cywgYW5kIGNvbnNpc3RlbnQgZXJyb3IgaGFuZGxpbmcuCi0gQWRkIHBhZ2lu
+YXRpb24sIHNlYXJjaGluZywgYW5kIGZpbHRlcmluZyBmb3IgbGFyZ2Ugc3R1
+ZGVudCBsaXN0cy4KLSBSZXZpZXcgc2VjdXJpdHkgc2V0dGluZ3MsIGluY2x1
+ZGluZyBDU1JGIHByb3RlY3Rpb24gYW5kIHBhc3N3b3JkLXJlc2V0IHRva2Vu
+IGV4cGlyeSB2YWxpZGF0aW9uLgotIFJlcGxhY2UgYXV0b21hdGljIHNjaGVt
+YSB1cGRhdGVzIHdpdGggdmVyc2lvbmVkIGRhdGFiYXNlIG1pZ3JhdGlvbnMu
+Ci0gQWRkIEFQSSBkb2N1bWVudGF0aW9uIGFuZCBhIGRvY3VtZW50ZWQgcHJv
+ZHVjdGlvbiBkZXBsb3ltZW50IHNldHVwLgotIEFkZCBDSSBjaGVja3MgYW5k
+IGNvbnRhaW5lciBzdXBwb3J0LgoKIyMgQ29udHJpYnV0aW5nCgpPcGVuIGFu
+IGlzc3VlIHRvIGRpc2N1c3MgYSBsYXJnZXIgY2hhbmdlLCB0aGVuIHN1Ym1p
+dCBhIHB1bGwgcmVxdWVzdCB3aXRoIGEgY2xlYXIgZGVzY3JpcHRpb24gb2Yg
+dGhlIGNoYW5nZS4K
 
-A Spring Boot web application for managing student records. It uses Thymeleaf for server-rendered pages and MySQL for persistence.
+## Author
 
-## Features
-
-- Create, view, edit, and delete student records, including bulk deletion.
-- Register and log in with Spring Security; registration passwords are encoded.
-- CAPTCHA support on the authentication flow.
-- Request a password reset by email.
-- Export student records to Excel and PDF.
-- Store users, students, and password-reset tokens with Spring Data JPA.
-
-## Requirements
-
-- Java 17 or later
-- MySQL
-
-Maven Wrapper scripts are included, so a separate Maven installation is not required.
-
-## Configuration
-
-Create a MySQL database (default name: `demo`) and configure the application with environment variables:
-
-| Variable | Default | Purpose |
-| --- | --- | --- |
-| `DB_URL` | `jdbc:mysql://localhost:3306/demo` | JDBC connection URL |
-| `DB_USERNAME` | `root` | Database username |
-| `DB_PASSWORD` | empty | Database password |
-| `SERVER_PORT` | `8080` | HTTP port |
-| `MAIL_HOST` | `smtp.gmail.com` | SMTP server |
-| `MAIL_PORT` | `587` | SMTP port |
-| `MAIL_USERNAME` | empty | SMTP account username |
-| `MAIL_PASSWORD` | empty | SMTP account password or app password |
-
-Set the mail variables to enable password-reset emails. Keep credentials out of source control.
-
-## Run locally
-
-From the repository root, run:
-
-```bash
-./mvnw spring-boot:run
-```
-
-On Windows, use:
-
-```powershell
-.\mvnw.cmd spring-boot:run
-```
-
-Then open [http://localhost:8080](http://localhost:8080). The application uses Hibernate schema updates (`ddl-auto=update`) for local development.
-
-## Future advancements
-
-- Add automated unit and integration tests for controllers, services, security, and exports.
-- Add role-based authorization and restrict student operations to permitted users.
-- Add server-side validation, friendly error pages, and consistent error handling.
-- Add pagination, searching, and filtering for large student lists.
-- Review security settings, including CSRF protection and password-reset token expiry validation.
-- Replace automatic schema updates with versioned database migrations.
-- Add API documentation and a documented production deployment setup.
-- Add CI checks and container support.
-
-## Contributing
-
-Open an issue to discuss a larger change, then submit a pull request with a clear description of the change.
+Srinath S
